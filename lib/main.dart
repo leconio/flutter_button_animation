@@ -45,6 +45,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+//  初始动画状态
   String _animation = "Idle";
 
   @override
@@ -55,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: new FlareActor(
-          "assets/anim/button-anim.flr",
+          "assets/anim/buttonAnim.flr",
           alignment: Alignment.center,
           fit: BoxFit.contain,
           animation: _animation,
@@ -64,7 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _animation =  "PlayButton";
+            //  执行到AnimButton状态
+            _animation =  "AnimButton";
           });
         },
         child: Icon(Icons.play_arrow),
